@@ -1,0 +1,103 @@
+<HTML>
+<HEAD>
+<TITLE>membuat fungsi matematika dengan JavaScript</TITLE>
+</HEAD>
+<BODY bgcolor = green>
+<SCRIPT LANGUAGE = "JavaScript">
+<!--
+//Input data a,b,c dan menyimpannya di variabel x,y,z
+var x = parseInt(prompt("Ketikkan nilai a = \nFormat persamaan kuadrat : ax2 + bx + c = 0"));
+var y = parseInt(prompt("Ketikkan nilai b = \nFormat persamaan kuadrat : ax2 + bx + c = 0"));
+var z = parseInt(prompt("Ketikkan nilai c = \nFormat persamaan kuadrat : ax2 + bx + c = 0"));
+
+var d = (y*y - 4*x*z); //Menghitung Determinan
+var dakar = (Math.sqrt(d)); //Menghitung akar Determinan
+
+function kuadrat1(a,b,c) //Menghitung nilai x1
+{
+var x = (-b + dakar) / (2*a);
+return(x);
+}
+
+function kuadrat2(a,b,c) //Menghitung nilai x2
+{
+var x = (-b - dakar) / (2*a);
+return(x);
+}
+
+function tanday(b) //Tanda positif negatif variabel y
+{
+if (y>=0)
+{
+tanday = "+";
+return(tanday);
+}
+else
+{
+tanday = "";
+return(tanday);
+}
+}
+
+function tandaz(c) //Tanda positif negatif variabel z
+{
+if (z>=0)
+{
+tandaz = "+";
+return(tandaz);
+}
+else
+{
+tandaz = "";
+return(tandaz);
+}
+}
+
+//Variabel untuk kebutuhan tampilan saja (superscript & subscript)
+var pangkat = "2";
+var subscript1 = "1";
+var subscript2 = "2";
+
+//Memanggil function untuk menghitung nilai x1 dan x2
+var p = kuadrat1(x,y,z);
+var q = kuadrat2(x,y,z);
+
+//Menampilkan format umum pers.kuadrat
+document.write("Format umum persamaan kuadrat : ax" +(pangkat.sup())+ " + bx + c = 0" + "<BR>" + "<hr>");
+
+//Memanggil function tanda positif-negatif tampilan y dan z
+var tanday = tanday(y);
+var tandaz = tandaz(z);
+
+//Menuliskan persamaan kuadrat, jika nilai a=1 atau a=-1, maka "1" nya tidak ditulis
+if (x==1)
+{
+document.write("Persamaan kuadrat yang ditanyakan: x" +(pangkat.sup())+ tanday +y+ "x" + tandaz +z+ "= 0" + "<BR>");
+}
+else if (x==-1)
+{
+document.write("Persamaan kuadrat yang ditanyakan: -x" +(pangkat.sup())+ tanday +y+ "x" + tandaz +z+ "= 0" + "<BR>");
+}
+else
+{
+document.write("Persamaan kuadrat yang ditanyakan: " +x+ "x" +(pangkat.sup())+ tanday +y+ "x" + tandaz +z+ "= 0" + "<BR>");
+}
+
+//Diproses hanya jika nilai determinan tidak negatif
+if (d>0)
+{
+document.write("Nilai x" +(subscript1.sub())+ " adalah : " +p+ "<BR>");
+document.write("Nilai x" +(subscript2.sub())+ " adalah : " +q);
+}
+else if (d==0)
+{
+document.write("Nilai x" +(subscript1.sub())+ " dan x" +(subscript2.sub())+ " adalah sama yaitu: " +p);
+}
+else
+{
+document.write("Maaf, nilai x1 dan x2 tidak dapat dihitung");
+}
+//-->
+</SCRIPT>
+</BODY>
+</HTML>

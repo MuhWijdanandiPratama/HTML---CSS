@@ -1,0 +1,69 @@
+<HTML>
+	<head>
+		<title>Objek String</title>
+		<style>
+			.blink{
+				animation: blink-animation 1s steps(5, start) infinite;
+				-webkit-animation: blink-animation 1s steps(5, start) infinite;
+			}
+			@keyframes blink-animation{
+				to{
+					visibility: hidden;
+				}
+			}
+			@-webkit-keyframes blink-animation {
+				to{
+					visibility: hidden;
+				}
+			}
+			.title {
+			    position: relative;
+			    color: #0984e3;
+			    padding: 20px 50px;
+			}
+	 
+			.title:before {
+			    background: #0984e3;
+			    color: white;
+			    overflow: hidden;
+			    position: absolute; 
+			    color: #f1f2f6; 
+			    top: 0;  
+			    left: 0;
+			    padding: 20px 50px;  
+			    clip-path: polygon(0% 0% , 50% 0%, 50% 100%, 0% 100%);
+			    border-radius: 25px 0 0 25px;
+			} 
+		</style>
+	</head>
+	<BODY BGCOLOR="lightblue">
+		<H3 class="title">Latihan Objek String</H3>
+		<span class="blink">Nama = Shafana Vevica</span><br>
+		<SCRIPT LANGUAGE="Javascript">
+			nama ="Shafana Vevica";
+			panjang=nama.length;
+			n=nama.substring(1,4);
+			besar=nama.toUpperCase()
+			namakulink=nama.link('shafa.html');
+			document.writeln('Namaku adalah = '+ nama +'<BR>');
+			document.writeln('Panjang namaku adalah '+ panjang + ' karakter <BR>'); 
+			document.writeln('method BIG = '+ nama.big() +'<BR>');
+			document.writeln('method SMALL = '+ nama.small() +'<BR>');
+			document.writeln('method SUB = '+ nama.sub() +'<BR>');
+			document.writeln('method SUP = '+ nama.sup() +'<BR>');
+			document.writeln('method BOLD = '+ nama.bold() +'<BR>');
+			document.writeln('method ITALIC = '+ nama.italics() +'<BR>');
+			document.writeln('method FONTCOLOR = '+ nama.fontcolor('red') +'<BR>');
+			document.writeln('method LOWERCASE = '+nama.toLowerCase()  +'<BR>');
+			document.writeln('method UPPERCASE = '+ besar +'<BR>');
+			document.writeln('method SUBSTRING = '+ n +'<BR>');
+			document.writeln('method STRIKE = '+ nama.strike() +'<BR>');
+			document.writeln('method CharAT = '+ nama.charAt(3) +'<BR>');
+			document.writeln('method Link = '+ namakulink +'<BR>');
+			document.writeln('Index Huruf c = '+ nama.indexOf("c") +'<BR>');
+			awal=nama.indexOf('V');
+			akhir=nama.length;
+			document.writeln('Kata Yang Tersisa = '+ nama.substring(awal,akhir) +'<BR>');
+		</SCRIPT>
+	</BODY>
+</HTML>

@@ -1,0 +1,28 @@
+<HTML>
+	<head>
+		<title>Objek Window</title>
+	</head>
+	<BODY>
+		<H3>Latihan Objek Window</H3><hr>
+		<SCRIPT LANGUAGE="Javascript">
+			window.status="Welcome";
+			window.alert=("Selamat Datang");
+			angka=window.prompt("Inputkan Angka ?",0);
+			document.write("Angka favorit anda adalah =<strong>" +angka+ "</strong><br>");
+			tampung=window.confirm("jenis kelamin anda Pria ?");
+			if(tampung){
+			  document.write("Anda adalah seorang pria");
+			  }
+			else{ 
+			  document.write("Anda adalah seorang wanita");
+			  }
+			 jawab=window.confirm("Ingin menutup tab ini??")
+     		if(jawab){
+     			window.close();
+     		}
+     		else{
+     			
+     		}
+		</SCRIPT>
+	</BODY>
+</HTML>

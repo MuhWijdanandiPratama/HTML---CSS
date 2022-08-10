@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>Faktorial dan Deret</title>
+	</head>
+	<body>
+		<script language="JavaScript">
+			function faktorialdanderet()
+			{
+			var deret=(document.ffrom.ideret.value);
+			var angka=1;
+			var jumlah=0.0;
+			var faktorial=1;
+			var hasiljumlah="";
+			var hasilfaktorial="";
+			var j="";
+			var f="";
+
+			while(angka<=deret)
+			{ jumlah=jumlah+angka; faktorial=faktorial*angka; angka++ }
+
+			for(i=1;i<deret;i++)
+			{
+			hasiljumlah=hasiljumlah+i+" + ";
+			t=hasiljumlah+""+deret+" = "+jumlah;
+
+			hasilfaktorial=hasilfaktorial+i+" x ";
+			f=hasilfaktorial+""+deret+" = "+faktorial;  
+			}
+
+			document.ffrom.ojumlah.value=t;
+			document.ffrom.ofaktorial.value=f;
+			}
+		</script>
+
+<form name="ffrom">
+<table border="1" align="center" width="70%">
+<tr><td width="100%" colspan="2">
+<h2 align="center">Perhitungan Faktorial dan Deret</h2>
+</td></tr>
+<tr><td width="50%">
+<pre>
+  Nilai     : <input type="text" size=11 name="ideret">
+
+  Faktorial : <input type="text" size=40 name="ofaktorial">
+  Jml Deret : <input type="text" size=40 name="ojumlah">
+</td>
+</tr>
+<tr>
+<td width="100%" colspan="2">
+<center>
+<input type="button" value="SUBMIT" onclick="faktorialdanderet()">
+<input type="reset" value="RESET">
+
+</center></td></tr>
+</form>
+</table>
+
+</body>
+</html>

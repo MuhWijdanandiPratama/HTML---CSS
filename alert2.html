@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function confirmation() {
+			var answer = confirm("Tinggalkan google.com")
+			if(answer){
+				alert("Selamat Tinggal")
+				window.location="http://youtube.com"
+			}
+			else{
+				alert("Terimakasih atas perhatiannya!")
+			}
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<input type="button" onclick="confirmation()" value="Tinggalkan google.com">
+	</form>
+</body>
+</html>

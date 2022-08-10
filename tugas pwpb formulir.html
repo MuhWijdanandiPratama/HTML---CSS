@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulir</title>
+	<script>
+		function tekan(){
+			var namastr = (document.fform.nama.value);
+			var absenstr = (document.fform.absen.value);
+			var kelaminstr =(document.fform.jenis.value);
+			var jurusanstr =(document.fform.jurusan.value);
+			var komenstr =(document.fform.komentar.value);
+			var ket="";
+			var ket1="";
+			var ket2="";
+			var ket3="";
+			var ket4="";
+			var ket5="";
+			var ket6="";
+			if(fform.badminton.checked==true){
+				ket="Badminton";
+			}
+			if(fform.sepakbola.checked==true){
+				ket="Sepakbola";
+			}
+			if(fform.basket.checked==true){
+				ket="Basket";
+			}
+			if(fform.mancing.checked==true){
+				ket="Memancing";
+			}
+			if(fform.travelling.checked==true){
+				ket="Travelling";
+			}
+			if(fform.menari.checked==true){
+				ket="Menari";
+			}
+			if(fform.hiking.checked==true){
+				ket="Hiking";
+			}
+
+			document.fform.onama.value = namastr;
+			document.fform.oabsen.value = absenstr;
+			document.fform.okelamin.value = kelaminstr;
+			document.fform.ojurusan.value = jurusanstr;
+			document.fform.ogemar.value = ket + ket1 + ket2 + ket3 + ket4 + ket5 + ket6;
+			document.fform.okomen.value = komenstr;
+		}
+	</script>
+	<style>
+		body{
+			background: #87CEFA;
+			font-family: calibri-light;
+		}
+		.login{
+			padding: 16px;
+  			margin: 32px auto;
+  			width: 400px;
+  			background: #fff;
+  			border-radius: 3px;
+		}
+		.tombol{
+			background: #3498db;
+  			color: #fff;
+  			border: 0;
+  			padding: 5px 8px;
+		}
+		input[type="text"],select,textarea{
+			padding: 8px;
+  			width: 95%;
+  			background: #efefef;
+  			border: 0;
+  			font-size: 10pt;
+  			margin: 6px 0px;
+		}
+		td{
+			font-size: 15px;
+		}
+	</style>
+</head>
+<body>
+	<center><h2>Formulir Pendaftaran</h2></center>
+	<div class="login">
+	<form name="fform">
+		<table>
+			<tr>
+				<td>Nama</td>
+				<td> : </td>
+				<td><input type="text" name="nama"></td>
+			</tr>
+			<tr>
+				<td>No Absen</td>
+				<td> : </td>
+				<td><input type="text" name="absen"></td>
+			</tr>
+			<tr>
+				<td>Jenis Kelamin</td>
+				<td> : </td>
+				<td>
+					<input type="radio" name="jenis" value="Laki-laki">Laki-laki
+					<input type="radio" name="jenis" value="Perempuan">Perempuan
+				</td>
+			</tr>
+			<tr>
+				<td>Jurusan</td>
+				<td> : </td>
+				<td>
+					<select name="jurusan">
+  						<option value="RPL">Rekayasa Perangkat Lunak</option>
+  						<option value="TKJ">Teknik Komputer dan Jaringan</option>
+  						<option value="MM">Multimedia</option>
+  						<option value="DKV">Desain Komunikasi Visual</option>
+  						<option value="BRO">Broadcast</option>
+  						<option value="AP">Administrasi Perkantoran</option>
+  						<option value="AN">Animasi</option>
+  						<option value="PJP">Bisnis Daring dan Pemasaran</option>
+  						<option value="AF">Alfamart</option>
+  						<option value="KI">Kimia Industri</option>
+					</select>
+				</td>
+			</tr>
+			<br>
+			<tr>
+				<td>Hobby</td>
+				<td> : </td>
+				<td>
+					<input type="checkbox" name="badminton" value="Badminton">Badminton
+					<input type="checkbox" name="sepakbola" value="Sepakbola">Sepak Bola
+					<input type="checkbox" name="basket" value="Basket">Basket
+					<input type="checkbox" name="mancing" value="Memancing">Memancing
+					<input type="checkbox" name="travelling" value="Travelling">Travelling
+					<input type="checkbox" name="menari" value="Menari">Menari
+					<input type="checkbox" name="hiking" value="Hiking">Hiking
+				</td>
+			</tr>
+			<tr>
+				<td>Komentar</td>
+				<td> : </td>
+				<td>
+					<textarea name="komentar" rows="5" cols="30"></textarea>
+				</td>
+			</tr>
+		</table>
+		<input type="button" value="Kirim" onclick="tekan()" class="tombol">
+		<input type="reset" value="Reset" class="tombol">
+		<h3>Output</h3>
+		Nama Anda : <input type="text" name="onama"><br>
+		No Absen Anda adalah : <input type="text" name="oabsen"><br>
+		Jenis Kelamin Anda Adalah : <input type="text" name="okelamin"><br>
+		Jurusan Anda Adalah : <input type="text" name="ojurusan"><br>
+		Hobby Anda Adalah : <input type="text" name="ogemar"><br>
+		Komentar Anda : <input type="text" name="okomen">
+	</div>
+	</form>
+</body>
+</html>

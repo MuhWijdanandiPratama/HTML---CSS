@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Sistem Kasir Sederhana dengan HTML</title>
+ </head>
+ <body>
+  <table border="1" cellpadding="10">
+   <tr valign="top">
+    <td>
+     Pensil Rp 3000 <input id="a" type="text"><br>
+     Pulpen Rp 3500 <input id="b" type="text"><br>
+     Spidol Rp 3000 <input id="c" type="text"><br>
+     Stabilo Rp 4000 <input id="d" type="text"><br>
+     Penghapus Rp 1500 <input id="e"  name="text"><br>
+     Stipo Rp 2500 <input id="f" name="text"><br>
+     <br>
+     Total Harga <input id="harga" type="text"><br>
+     Total Bayar <input id="bayar" type="text"><br>
+     Kembalian <input id="kembali" type="text"><br>
+     <br>
+     <button onclick="hitung()">Hitung</button>
+     <input type="reset" value="Ulang" >
+    </td>
+   </tr>
+  </table>
+  <script>
+   function hitung() {
+    var a, b, c, d, e, f;
+        // Mengambil nilai dari Input Text
+    a = parseInt(getID("a").value) || 0;
+    b = parseInt(getID("b").value) || 0;
+    c = parseInt(getID("c").value) || 0;
+    d = parseInt(getID("d").value) || 0;
+    e = parseInt(getID("e").value) || 0;
+    f = parseInt(getID("f").value) || 0;
+        // Mengalikan dengan harga yang tertera
+    a *= 3000;
+    b *= 3500;
+    c *= 3000;
+    d *= 4000;
+    e *= 1500;
+    f *= 2500;
+        // Mencari Total yang harus dibayar      
+    var harga = (a + b + c + d + e + f);
+    getID("harga").value = harga;
+        // Mengambil nilai Uang yang dibayarkan     
+    var bayar = parseInt(getID("bayar").value) || 0;
+        // Menghitung uang kembalian
+    var kembali = (bayar - harga);
+    getID("kembali").value = kembali;
+   }
+   function getID(n) {
+    // Mencari element berdasarkan ID
+    return document.getElementById(n);
+   }
+  </script>
+ </body>
+</html>

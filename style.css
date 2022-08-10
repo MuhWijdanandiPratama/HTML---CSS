@@ -1,0 +1,122 @@
+body{
+	background: #00cc00/*color*/ url("gambar/sfc.png")/*image*/ no-repeat/*supaya hanya muncul 1 kali*//*attachment*/ right/*position*/;
+}
+#Menu_web{/*# untuk id*/
+	background:white;
+}
+.Menu{/*. untuk class*/
+	color:black;
+}
+h1{
+	font-family:Times New Roman;
+	font-style:lighter;
+	color:white;
+	text-align:center;
+	text-decoration:underline;
+}
+h2{
+	color:white;
+	text-align:center;
+}
+#text{
+	font-size:20px;
+	text-align:center;
+	color:white;
+}
+#text_description{
+	color:white;
+	text-indent:40px;
+	text-align:justify;
+	line-height:20px;
+	word-spacing:5px;
+}
+.Menu{
+	text-decoration:none;
+	display:inline-block;
+	height:50px;
+	width:100px;
+	padding:10px 5px;
+	/*margin:top right bottom left;*/
+	margin:15px 5px 10px 0;
+	/*border:ketebalan jenis warna;*/
+	border:2px solid black;
+}
+
+/*Menghias Link*/
+/*Kondisi Biasa*/
+.Menu:link{
+	background:white;
+}
+/*Ketika sudah dikunjungi*/
+.Menu:visited{
+	background:grey;
+}
+/*ketika mouse berada diatasnya*/
+.Menu:hover{
+	background:red;
+}
+/*Ketika sedang diklik*/
+.Menu:active{
+	background:yellow;
+}
+
+
+/* Mengatur posisi di css */
+/* 1.Static 2.Relative 3.Absolute 4.Fixed */
+
+/*
+#Menu_store{
+	position:relative;
+	top:50px;
+	left:100px;
+}
+
+#parent_h1{
+	position:relative;
+	top:100px;
+}*/
+
+/*posisi absolute tergantung pada parent element*/
+/*
+#h1_store{
+	position:absolute;
+	top:140px;
+	left:20px;
+	background:;
+}
+
+#parent_h2{
+	position:relative;
+	top:100px;
+}*/
+
+/*posisi relative tergantung pada browser*/
+/*
+#h2_store{
+	position:fixed;
+	top:100px;
+	left:20px;
+	background:#33ffbb;
+}*/
+
+table{
+	float:left;
+	margin-right:20px;
+}
+
+#text{
+	color:white;
+}
+
+ul,ol,dl{
+	float:left;
+	margin:0px;
+	padding:0px;
+	width:33.33%;
+	color:white;
+}
+
+#saran{
+	clear:both;
+	padding-top:30px;
+}

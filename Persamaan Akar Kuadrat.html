@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Persamaan Akar Kuadrat</title>
+	<script type="text/javascript">
+		function total() {
+			var a = (document.fform.bilA.value);
+			var b = (document.fform.bilB.value);
+			var c = (document.fform.bilC.value);
+			var x = (document.fform.bilX.value);
+			var x1;
+			var x2;
+			var D = 0.0;
+			D = (b*b)-(4*a*c);
+			if(D>0){
+				x1 = (-b + sqrt(D)) / (2*a);
+				x2 = (-b - sqrt(D)) / (2*a);
+			}
+			else if(D==0){
+				x1 = (-b + sqrt(D)) / (2*a);
+				x2=x1;
+			}
+			else{
+				alert("nAkar Imajiner");
+			}
+			document.fform.oD.value=eval(hasil);
+		}
+	</script>
+</head>
+<body>
+	<form name="fform">
+	<center>
+	<h1>Menghitung Akar Suatu Bilangan</h1>
+	</center>
+	Masukkan Nilai a :
+	<input type="text" name="bilA">
+	Masukkan Nilai b :
+	<input type="text" name="bilB">
+	Masukkan Nilai c :
+	<input type="text" name="bilC">
+	Masukkan Nilai x :
+	<input type="text" name="bilX">
+	<br>
+	<input type="button" value="Hitung" onclick="total()">
+	<input type="reset" value="Ulang"><br>
+	Hasil :
+	<input type="text" name="oD">
+	</form>
+</body>
+</html>
